@@ -1,0 +1,38 @@
+#home {
+  margin-top: 5vw;
+  background-color: var(--white);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+}
+.homeContainer {
+  padding: 15% 10%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.homeContainer div {
+  width: 100%;
+}
+.homeLeft {
+  font-size: var(--fontBig);
+  position: relative;
+  left: 5vw;
+  bottom: -20vw;
+  width: 80%;
+  z-index: 9999999999;
+}
+.homeRight {
+  max-width: 30vw;
+  width: 50px;
+  position: relative;
+  left: 5vw;
+}
+
+.homeRight img {
+  border-radius: 20px;
+  width: 100%;
+}
