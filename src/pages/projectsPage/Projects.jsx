@@ -28,24 +28,26 @@ const Projects = () => {
               data-card3d=""
               data-card3d-reverse="true">
               <div className="cardImage">
-                <img src={portfoliov3} alt="" />
+                <img src={image} alt="" />
               </div>
               <div className="cardText">
-                <div className="cardTitle">Previous Portfolio</div>
+                <div className="cardTitle">Ecommerce</div>
                 <div className="cardDescription">
-                  Portfolio from 3 months ago, different style, much simpler.
+                  Ecommerce made with ReduxTk consuming a free API.
                 </div>
                 <div className="cardLink">
                   <a
-                    href="https://portfolio-santiago-giraldo.netlify.app"
+                    href="https://github.com/BolsitaDP/generic-ecommerce-redux"
                     target="_blank"
                     rel="noopener noreferrer">
-                    Demo
+                    Repository
                   </a>
                 </div>
               </div>
               <div className="cardTechnologies">
                 <FaReact />
+                <SiRedux />
+                <TbApi />
                 <FaGit />
               </div>
             </div>
@@ -88,13 +90,14 @@ const Projects = () => {
                 <img src={image} alt="" />
               </div>
               <div className="cardText">
-                <div className="cardTitle">Lorem ipsum dolor sit amet.</div>
+                <div className="cardTitle">CRUD Todo list.</div>
                 <div className="cardDescription">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Vero, deserunt!
+                  Todo List made with ReduxTk.
                 </div>
                 <div className="cardLink">
-                  <a href="#3">Demo</a>
+                  <a href="https://github.com/BolsitaDP/crud-reduxtoolkit">
+                    Repository
+                  </a>
                 </div>
               </div>
               <div className="cardTechnologies">
@@ -113,19 +116,48 @@ const Projects = () => {
                 <img src={image} alt="" />
               </div>
               <div className="cardText">
-                <div className="cardTitle">Lorem ipsum dolor sit amet.</div>
+                <div className="cardTitle">Nextjs github store clone</div>
                 <div className="cardDescription">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Vero, deserunt!
+                  Kind of ecommerce made with ReduxTk and consuming a free API.
                 </div>
                 <div className="cardLink">
-                  <a href="#3">Demo</a>
+                  <a href="https://github.com/BolsitaDP/nextjs-1-github-store">
+                    Repository
+                  </a>
                 </div>
               </div>
               <div className="cardTechnologies">
                 <FaReact />
                 <FaGit />
                 <SiRedux />
+                <TbApi />
+              </div>
+            </div>
+          </Parallax>
+          <Parallax speed={0}>
+            <div
+              className="card card4"
+              data-card3d=""
+              data-card3d-reverse="true">
+              <div className="cardImage">
+                <img src={image} alt="" />
+              </div>
+              <div className="cardText">
+                <div className="cardTitle">MoviePage</div>
+                <div className="cardDescription">
+                  Movie page clone with ReduxTk consuming a free API.
+                </div>
+                <div className="cardLink">
+                  <a href="https://github.com/BolsitaDP/PaginaPeliculas">
+                    Repository
+                  </a>
+                </div>
+              </div>
+              <div className="cardTechnologies">
+                <FaReact />
+                <FaGit />
+                <SiRedux />
+                <TbApi />
               </div>
             </div>
           </Parallax>
