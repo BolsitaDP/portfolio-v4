@@ -31,6 +31,42 @@ const Projects = () => {
                 <img src={image} alt="" />
               </div>
               <div className="cardText">
+                <div className="cardTitle">Food Delivery App</div>
+                <div className="cardDescription">
+                  Food Delivery App made with ReduxTk consuming fake data.
+                </div>
+                <div className="cardLink">
+                  <a
+                    href="https://github.com/BolsitaDP/food-delivery-v1"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Repository
+                  </a>
+                  <a
+                    href="https://food-delivery-sg.netlify.app/home"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Demo
+                  </a>
+                </div>
+              </div>
+              <div className="cardTechnologies">
+                <FaReact />
+                <SiRedux />
+                <TbApi />
+                <FaGit />
+              </div>
+            </div>
+          </Parallax>
+          <Parallax speed={0}>
+            <div
+              className="card card2"
+              data-card3d=""
+              data-card3d-reverse="true">
+              <div className="cardImage">
+                <img src={image} alt="" />
+              </div>
+              <div className="cardText">
                 <div className="cardTitle">Ecommerce</div>
                 <div className="cardDescription">
                   Ecommerce made with ReduxTk consuming a free API.
@@ -54,7 +90,7 @@ const Projects = () => {
           </Parallax>
           <Parallax speed={0}>
             <div
-              className="card card2"
+              className="card card3"
               data-card3d=""
               data-card3d-reverse="true">
               <div className="cardImage">
@@ -83,7 +119,7 @@ const Projects = () => {
           </Parallax>
           <Parallax speed={0}>
             <div
-              className="card card3"
+              className="card card4"
               data-card3d=""
               data-card3d-reverse="true">
               <div className="cardImage">
