@@ -9,8 +9,9 @@ import {
   SiRedux,
   SiNextdotjs,
   SiFirebase,
-  SiMongodb,
   SiBlender,
+  SiTypescript,
+  SiMongodb
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { Parallax } from "react-scroll-parallax";
@@ -18,6 +19,7 @@ import { Parallax } from "react-scroll-parallax";
 // data-card3d="" data-card3d-reverse="true"
 
 const Projects = () => {
+  // I know I could use map() and it should be a good practice but I'm not sure about if I want to keep this section in this style.
   return (
     <section name="projects" id="projects" className="section">
       <div className="projectsContainer">
@@ -85,6 +87,69 @@ const Projects = () => {
                 <SiRedux />
                 <TbApi />
                 <FaGit />
+              </div>
+            </div>
+          </Parallax>
+          <Parallax speed={0}>
+            <div
+              className="card card2"
+              data-card3d=""
+              data-card3d-reverse="true">
+              <div className="cardImage">
+                <img src={image} alt="" />
+              </div>
+              <div className="cardText">
+                <div className="cardTitle">API</div>
+                <div className="cardDescription">
+                  API Rest made with Typescript on Node server and MongoDB database
+                </div>
+                <div className="cardLink">
+                  <a
+                    href="https://github.com/BolsitaDP/api_rest_typescript"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Repository
+                  </a>
+                </div>
+              </div>
+              <div className="cardTechnologies">
+                <FaReact />
+                <SiTypescript />
+                <TbApi />
+                <FaGit />
+                <FaNodeJs />
+                <SiMongodb />
+              </div>
+            </div>
+          </Parallax>
+          <Parallax speed={0}>
+            <div
+              className="card card2"
+              data-card3d=""
+              data-card3d-reverse="true">
+              <div className="cardImage">
+                <img src={image} alt="" />
+              </div>
+              <div className="cardText">
+                <div className="cardTitle">Expenses tracker</div>
+                <div className="cardDescription">
+                  Expenses tracker made using Redux and a React library for graphics
+                </div>
+                <div className="cardLink">
+                  <a
+                    href="https://github.com/BolsitaDP/exp_tracker"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Repository
+                  </a>
+                </div>
+              </div>
+              <div className="cardTechnologies">
+                <FaReact />
+                <SiRedux />
+                <TbApi />
+                <FaGit />
+                <SiMongodb />
               </div>
             </div>
           </Parallax>
