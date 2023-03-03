@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Dropdown.css";
 
 const Dropdown = () => {
   const [checked1, setChecked1] = useState(true);
@@ -22,63 +21,82 @@ const Dropdown = () => {
     setChecked3(true);
   };
 
+  const techHigh = [
+    "React",
+    "React Native",
+    "Node",
+    "MongoDB",
+    "ReduxTk",
+    "Git",
+    "MySQL",
+  ];
+
+  const techMed = [
+    "Next",
+    "Java",
+    "C#",
+    ".NET",
+    "Python",
+    "Django",
+    "Angular",
+    "PHP",
+    "Laravel",
+  ];
+
   return (
     <ul>
       <li>
-        <label htmlFor="touch1">
-          <span className="span1">Technologies I use</span>
+        <label htmlFor="dropdownTouch1">
+          <span className="dropdownSpan">Technologies ++</span>
         </label>
         <input
           type="checkbox"
           checked={checked1}
           onChange={handleCheck1}
-          id="touch1"
+          id="dropdownTouch1"
         />
-        <ul className="slide1">
-          <li>React</li>
-          <li>Node</li>
-          <li>Git</li>
-          <li>Redux TK</li>
-          <li>Next.js</li>
-          <li>MongoDb</li>
-          <li>FireBase</li>
-          <li>React Native</li>
-          <li>Unity</li>
-          <li>GameMaker Studio 2</li>
-          <li>Blender</li>
+        <ul className="dropdownSlide dropdownSlide1">
+          <p className="dropdownP">
+            Technologies that I can use without looking documentation in every
+            step.
+          </p>
+          {techHigh.map((el, index) => {
+            return <li key={index}>{el}</li>;
+          })}
         </ul>
       </li>
       <li>
-        <label htmlFor="touch2">
-          <span className="span2">Technologies I prefer</span>
+        <label htmlFor="dropdownTouch2">
+          <span className="dropdownSpan">Technologies +-</span>
         </label>
         <input
           type="checkbox"
           checked={checked2}
           onChange={handleCheck2}
-          id="touch2"
+          id="dropdownTouch2"
         />
-        <ul className="slide2">
-          <li>
-            Currently my main interest is React, although I also love UX/UI
-            designs and making beautiful things with CSS. <br /> Anyway, I don't
-            rule out the idea of ​​becoming a full stack developer in the near
-            future.
-          </li>
+        <ul className="dropdownSlide dropdownSlide2">
+          <p className="dropdownP">
+            Technologies I can use but probably I have to look the documentation
+            a little bit more.
+          </p>
+          {techMed.map((el, index) => {
+            return <li key={index}>{el}</li>;
+          })}
         </ul>
       </li>
 
       <li>
-        <label htmlFor="touch3">
-          <span className="span3">Soft skills</span>
+        <label htmlFor="dropdownTouch3">
+          <span className="dropdownSpan">Soft skills</span>
         </label>
         <input
           type="checkbox"
           checked={checked3}
           onChange={handleCheck3}
-          id="touch3"
+          id="dropdownTouch3"
         />
-        <ul className="slide3">
+        <ul className="dropdownSlide dropdownSlide3">
           <li>
             Without boasting… well, maybe a little, I consider myself a quick
             learner, with a high tolerance for frustration and I am good at

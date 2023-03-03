@@ -1,22 +1,367 @@
-.loading {
+/* ------------------- NAVBAR ------------------------ */
+
+.navbar {
+  background-color: var(--primaryWhite);
+  color: var(--primaryCol);
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  width: 100%;
+  padding: 1% 5%;
+  font-family: monospace;
   position: fixed;
-  top: -10%;
-  width: 100vw;
-  height: 120vh;
-  background-color: var(--white);
-  animation: fadein var(--animationTime) ease forwards;
+  z-index: 9999;
 }
 
-@keyframes fadein {
-  0% {
-    z-index: 99999;
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    z-index: -999;
-    opacity: 0;
-  }
+.navbarName {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.navbarLinks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2em;
+  align-content: center;
+  gap: 4%;
+  width: 40%;
+}
+
+.navbarLinks li {
+  align-content: center;
+  margin: auto;
+}
+
+.navbarLinkBtn {
+  cursor: pointer;
+}
+
+.navbarIcons {
+  display: flex;
+  gap: 50px;
+  width: 20%;
+  justify-content: center;
+}
+
+.navbarIcons a svg {
+  width: 2.5em;
+  height: 2.5em;
+  color: var(--primaryCol);
+}
+
+/* ------------------------ HOME -------------------- */
+
+.homeSection {
+  background-color: var(--primaryWhite);
+  padding: 10%;
+  height: 80vh;
+  display: flex;
+  gap: 10%;
+  font-family: monospace;
+  padding-top: 15%;
+}
+
+.homeLeft,
+.homeRight {
+  height: fit-content;
+}
+
+.homeLeft img {
+  border-radius: 5%;
+  margin-top: 20%;
+}
+
+.homeRight {
+  margin-top: 20%;
+  font-size: 3em;
+}
+
+.homeRight span {
+  font-weight: bold;
+}
+
+/* ------------------ ABOUT ----------------------------- */
+
+.aboutSection {
+  height: 100vh;
+  background-color: var(--primaryCol);
+  color: var(--primaryWhite);
+  padding: 10%;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  gap: 10%;
+}
+
+.aboutLeft {
+  background-color: var(--primaryCol);
+  border: 2px solid var(--primaryWhite);
+  border-radius: 3%;
+  padding: 2%;
+  width: 30%;
+  z-index: 999;
+  height: 80%;
+}
+
+.aboutRight {
+  width: 60%;
+  margin-top: 10%;
+  font-size: 1.2em;
+  font-family: monospace;
+}
+
+.aboutRightMain {
+  font-size: 1.4em;
+}
+
+.aboutMotionContainer {
+  background-color: var(--primaryWhite);
+  padding: 8%;
+  border-radius: 5%;
+}
+
+.aboutMotionContainer::before {
+  content: "This section is draggable";
+  color: var(--primaryWhite);
+  position: absolute;
+  top: -4%;
+  left: 35%;
+}
+
+.aboutMotionItem1 {
+  background-color: var(--primaryCol);
+  padding: 5%;
+  border-radius: 5%;
+  border: 1px solid var(--primaryWhite);
+}
+
+.aboutMotionItem2 {
+  background-color: var(--primaryCol);
+  padding: 4%;
+  border-radius: 3%;
+  border: 1px solid var(--primaryWhite);
+}
+
+/* ------------------- DROPDOWN --------------------------- */
+
+.dropdownSpan {
+  padding: 2vw;
+  background: transparent;
+  color: var(--primaryWhite);
+  font-size: 1.7em;
+  font-family: monospace;
+  cursor: pointer;
+  display: block;
+}
+.dropdownSpan::after {
+  float: right;
+  right: 10%;
+  content: "+";
+}
+.dropdownSlide {
+  clear: both;
+  width: 100%;
+  height: 0px;
+  overflow: scroll;
+  text-align: center;
+  transition: height 0.5s ease;
+  background-color: transparent;
+  color: var(--primaryWhite);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.dropdownSlide li {
+  font-family: monospace;
+  letter-spacing: 0.2vw;
+  padding: 1vw;
+  font-size: 1.4em;
+}
+.dropdownP {
+  color: var(--primaryWhite);
+  font-family: monospace;
+  font-size: 1.2em;
+  margin: 0 8%;
+}
+#dropdownTouch1 {
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+}
+#dropdownTouch1:checked + .dropdownSlide1 {
+  height: 350px;
+}
+
+/* ---------------------------- 2 ----------------------- */
+
+#dropdownTouch2 {
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+}
+#dropdownTouch2:checked + .dropdownSlide2 {
+  height: 350px;
+}
+/* ---------------------------- 3 ----------------------- */
+
+#dropdownTouch3 {
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+}
+#dropdownTouch3:checked + .dropdownSlide3 {
+  height: 350px;
+}
+
+/* ------------------------ SKILLS --------------------- */
+
+.skillsSection {
+  padding: 10%;
+  background-color: var(--primaryWhite);
+}
+
+.skillsSlider {
+  background-color: var(--primaryCol);
+  padding: 5%;
+  border-radius: 2%;
+}
+
+.skillsSliderContainer {
+  display: flex;
+  overflow: hidden;
+}
+
+.skillsSliderItem {
+  background-color: var(--primaryWhite);
+  padding: 4%;
+  border-radius: 5%;
+}
+
+.skillsSliderItemContent {
+  width: 200px;
+  font-family: monospace;
+  color: var(--primaryCol);
+  text-align: center;
+}
+
+.skillsSliderItemTitle {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.skillsSliderItemProvider,
+.skillsSliderItemDate {
+  font-size: 1.2em;
+}
+
+.skillsSliderItemUrl {
+  color: var(--primaryCol);
+  text-decoration: underline;
+}
+
+.skillsBns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillsSliderBtnPrev,
+.skillsSliderBtnNext {
+  background-color: var(--primaryWhite);
+  padding: 1%;
+  border: none;
+  border-radius: 10%;
+  margin-top: 2%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.skillsSliderBtnPrev.disabled,
+.skillsSliderBtnNext.disabled {
+  pointer-events: none;
+  background-color: var(--primaryCol);
+  color: var(--primaryWhite);
+}
+
+/* ------------------- PROJECTS ---------------- */
+
+.projectsSection {
+  padding: 8% 10%;
+  background-color: var(--primaryCol);
+  display: flex;
+  gap: 10%;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: monospace;
+}
+
+.projectsCard {
+  background-color: var(--primaryWhite);
+  padding: 3%;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 0;
+}
+
+.projectsCardImg {
+  border-radius: 5%;
+  margin-bottom: 10%;
+}
+
+.projectsCardTitle {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.projectsCardIcons {
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projectsCardIcons svg {
+  width: 2em;
+  height: 2em;
+  color: var(--primaryCol);
+  margin: 0 2%;
+}
+
+.projectsCardUrl {
+  margin-top: 10%;
+  font-size: 1.5em;
+  color: var(--primaryCol);
+  text-decoration: underline;
+}
+
+/* -------------------- CONTACT -------------------- */
+
+.contactSection {
+  background-color: var(--primaryWhite);
+  color: var(--primaryCol);
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  font-size: 1.6em;
+  line-height: 2em;
+  font-family: monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contactSection a {
+  color: var(--primaryCol);
+  text-decoration: underline;
 }
